@@ -1,5 +1,5 @@
 variable "scylladb_user" {
-  type      = string
+  type = string
 }
 
 variable "scylladb_password" {
@@ -8,7 +8,7 @@ variable "scylladb_password" {
 }
 
 variable "postgresql_user" {
-    type = string
+  type = string
 }
 
 variable "postgresql_password" {
@@ -17,7 +17,7 @@ variable "postgresql_password" {
 }
 
 variable "rabbitmq_user" {
-    type = string
+  type = string
 }
 
 variable "rabbitmq_password" {
@@ -26,11 +26,11 @@ variable "rabbitmq_password" {
 }
 
 variable "meili_master_key" {
-    type      = string
-    sensitive = true
+  type      = string
+  sensitive = true
 
-    validation {
-        condition     = length(var.meili_master_key) >= 16
-        error_message = "The meili_master_key must be at least 16 characters long."
-    }
+  validation {
+    condition     = length(var.meili_master_key) >= 16
+    error_message = "The meili_master_key must be at least 16 characters long."
+  }
 }

@@ -11,7 +11,7 @@ resource "helm_release" "meilisearch" {
 
   set = [
     {
-      name = "persistence.enabled"
+      name  = "persistence.enabled"
       value = true
     },
     {
@@ -27,5 +27,5 @@ resource "helm_release" "meilisearch" {
     }
   ]
 
-  depends_on = [ helm_release.longhorn ]
+  depends_on = [helm_release.longhorn]
 }

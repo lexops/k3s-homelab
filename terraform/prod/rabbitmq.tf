@@ -23,5 +23,5 @@ resource "helm_release" "rabbitmq" {
     }
   ]
 
-  depends_on = [ helm_release.longhorn ]
+  depends_on = [helm_release.longhorn]
 }

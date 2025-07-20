@@ -23,5 +23,5 @@ resource "helm_release" "postgresql" {
     }
   ]
 
-  depends_on = [ helm_release.longhorn ]
+  depends_on = [helm_release.longhorn]
 }

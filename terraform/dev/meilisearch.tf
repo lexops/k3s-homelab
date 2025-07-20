@@ -11,7 +11,7 @@ resource "helm_release" "meilisearch" {
 
   set = [
     {
-      name = "persistence.enabled"
+      name  = "persistence.enabled"
       value = true
     },
     {

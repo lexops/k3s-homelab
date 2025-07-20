@@ -1,5 +1,3 @@
-
-
 resource "helm_release" "longhorn" {
   name             = local.environment
   namespace        = "longhorn-system"
@@ -9,5 +7,4 @@ resource "helm_release" "longhorn" {
   create_namespace = true
   atomic           = true
   cleanup_on_fail  = true
-
 }

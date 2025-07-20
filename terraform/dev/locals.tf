@@ -1,4 +1,4 @@
 locals {
-  environment = "${basename(path.cwd)}"
+  environment = basename(path.cwd)
   user        = "${local.environment}-user"
 }
