@@ -1,0 +1,4 @@
+image:
+  debug: true
+resourcePreset: "large"
+initDBConfigMap: "scylladb-migration"

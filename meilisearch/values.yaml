@@ -1,0 +1,4 @@
+environment:
+  MEILI_ENV: production
+persistence:
+  enabled: true
