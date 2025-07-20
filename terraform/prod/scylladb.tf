@@ -42,4 +42,6 @@ resource "helm_release" "scylladb" {
       value = var.scylladb_password
     }
   ]
+  
+  depends_on = [ helm_release.longhorn ]
 }
