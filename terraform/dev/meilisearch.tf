@@ -1,5 +1,5 @@
 
-resource "helm_release" "rabbitmq" {
+resource "helm_release" "meilisearch" {
   name             = local.environment
   namespace        = "meilisearch"
   repository       = "https://meilisearch.github.io/meilisearch-kubernetes"
@@ -10,6 +10,10 @@ resource "helm_release" "rabbitmq" {
   cleanup_on_fail  = true
 
   set = [
+    {
+      name = "persistence.enabled"
+      value = true
+    },
     {
       name  = "environment.MEILI_ENV"
       value = "production"
